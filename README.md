@@ -6,6 +6,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [1260-shift-2d-grid](https://github.com/Agrawal-Kshitij/LeetCode/tree/master/1260-shift-2d-grid) |
 | [1979-find-greatest-common-divisor-of-array](https://github.com/Agrawal-Kshitij/LeetCode/tree/master/1979-find-greatest-common-divisor-of-array) |
+| [3501-maximize-active-section-with-trade-ii](https://github.com/Agrawal-Kshitij/LeetCode/tree/master/3501-maximize-active-section-with-trade-ii) |
 ## Math
 |  |
 | ------- |
@@ -26,6 +27,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1081-smallest-subsequence-of-distinct-characters](https://github.com/Agrawal-Kshitij/LeetCode/tree/master/1081-smallest-subsequence-of-distinct-characters) |
+| [3501-maximize-active-section-with-trade-ii](https://github.com/Agrawal-Kshitij/LeetCode/tree/master/3501-maximize-active-section-with-trade-ii) |
 ## Stack
 |  |
 | ------- |
@@ -46,4 +48,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1260-shift-2d-grid](https://github.com/Agrawal-Kshitij/LeetCode/tree/master/1260-shift-2d-grid) |
+## Binary Search
+|  |
+| ------- |
+| [3501-maximize-active-section-with-trade-ii](https://github.com/Agrawal-Kshitij/LeetCode/tree/master/3501-maximize-active-section-with-trade-ii) |
+## Segment Tree
+|  |
+| ------- |
+| [3501-maximize-active-section-with-trade-ii](https://github.com/Agrawal-Kshitij/LeetCode/tree/master/3501-maximize-active-section-with-trade-ii) |
 <!---LeetCode Topics End-->
