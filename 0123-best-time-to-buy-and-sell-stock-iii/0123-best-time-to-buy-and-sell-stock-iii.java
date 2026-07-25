@@ -22,13 +22,33 @@ class Solution {
     }
     public int maxProfit(int[] prices) {
         int n = prices.length;
-        int[][][]dp = new int[n][2][3];
-        for(int i = 0;i<n;i++){
+        int[][][]dp = new int[n+1][2][3];
+        // for(int i = 0;i<n;i++){
+        //     for(int j = 0;j<2;j++){
+        //         Arrays.fill(dp[i][j] , -1);
+        //     }
+        // }
+        for(int i = n-1;i>=0;i--){
             for(int j = 0;j<2;j++){
-                Arrays.fill(dp[i][j] , -1);
+                for(int k = 1;k>=0;k--){
+                    int one = 0;
+                    int two = 0;
+                    if(j == 0){
+                        one = dp[i+1][1][k]-prices[i];
+                        two = dp[i+1][0][k];
+                    }
+                    if(j == 1){
+                        one = dp[i+1][0][k+1]+prices[i];
+                        two = dp[i+1][j][k];
+                    }
+                    dp[i][j][k] = Math.max(one , two);
+                }
+                
             }
         }
-        return helper(prices , 0 , 0 , 0 , dp);
+        return dp[0][0][0];
+
+        //return helper(prices , 0 , 0 , 0 , dp);
 
         
     }
