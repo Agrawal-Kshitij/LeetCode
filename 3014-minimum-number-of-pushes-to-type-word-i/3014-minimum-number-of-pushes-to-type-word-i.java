@@ -1,19 +1,9 @@
 class Solution {
     public int minimumPushes(String word) {
         int n = word.length();
-        int cnt = 0;
-        int answer = 0;
-        int curr = 1;
-        for(int i = 0;i<n;i++){
-            if(cnt < 8){
-                answer+=curr;
-                cnt++;
-            }
-            if(cnt == 8){
-                curr++;
-                cnt = 0;
-            }
-        }
-        return answer;
+        if(n <= 8)return n;
+        if(n <= 16)return 8+(n-8)*2;
+        if(n <= 24)return 24+(n-16)*3;
+        return 48+(n-24)*4;
     }
 }
