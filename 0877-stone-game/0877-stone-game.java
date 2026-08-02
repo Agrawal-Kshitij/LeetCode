@@ -1,27 +1,24 @@
 class Solution {
-    // private int helper(int[]piles , int index1 , int index2 , boolean chance){
-    //     if(index1 > index2){
-    //         if(scoreA > scoreB)return 0;
-    //         return -1;
-    //     }
-    //     if(chance == true){
-    //         int ans1 = helper(piles , index1+1 , index2 , false);
-    //         int ans2 = helper(piles , index1 , index2-1 , false);
-    //         if(ans1 == -1 && ans2 == -1)return -1;
-    //         if(ans1 != -1)return ans1+piles[index1];
-    //         return ans2+piles[index2];
-    //     }
-    //     int ans1 = helper(piles , index1+1 , index2 , true);
-    //     int ans2 = helper(piles , index1 , index2-1 , true);
-    //     if(ans1 != -1 && ans2 != -1){
-
-    //     }
-    //     return -1;
-    // }
+    private int helper(int[]nums , int i , int j , int[][]dp){
+        if(i > j)return 0;
+        if(dp[i][j] != -1)return dp[i][j];
+        int one = nums[i]+Math.min(helper(nums , i+2 , j , dp) , helper(nums , i+1 , j-1 , dp));
+        int two = nums[j]+Math.min(helper(nums , i+1 , j-1 , dp) , helper(nums , i , j-2 , dp));
+        return dp[i][j] = Math.max(one , two);
+    }
     public boolean stoneGame(int[] piles) {
         int n = piles.length;
-        return true;
-        //return helper(piles , 0 , piles.length-1 , true);
+        int[][]dp = new int[n+1][n+1];
+        for(int i = 0;i<=n;i++){
+            Arrays.fill(dp[i] , -1);
+        }
+        int A = helper(piles , 0 , piles.length-1 , dp);
+        int sum = 0;
+        for(int i = 0;i<n;i++){
+            sum+=piles[i];
+        }
+        int B = sum-A;
+        return A>=B;
         
     }
 }
